@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image" href="icon.png?v=2" />
+  <link rel="stylesheet" href="login.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Twinkle+Star&display=swap" rel="stylesheet">
+  <title>ISL &mdash; LOGIN</title>
+  <style>
+    form{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+    .home{
+      padding-bottom: 40px;
+    }
+    .info{
+      font-family: sans-serif;
+      letter-spacing: 1px;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <svg class="chat-icon" viewBox="0 0 200 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M33.475 136.175C34.7725 137.477 35.7667 139.05 36.3868 140.781C37.0069 142.511 37.2376 144.357 37.0625 146.188C36.184 154.657 34.5185 163.027 32.0875 171.188C49.525 167.15 60.175 162.475 65.0125 160.025C67.7563 158.635 70.9161 158.306 73.8875 159.1C82.4054 161.371 91.1846 162.514 100 162.5C149.95 162.5 187.5 127.412 187.5 87.5C187.5 47.6 149.95 12.5 100 12.5C50.05 12.5 12.5 47.6 12.5 87.5C12.5 105.85 20.2125 122.875 33.475 136.175ZM27.3125 184.988C24.3509 185.575 21.3796 186.112 18.4 186.6C15.9 187 14 184.4 14.9875 182.075C16.0974 179.457 17.1147 176.802 18.0375 174.113L18.075 173.988C21.175 164.988 23.7 154.638 24.625 145C9.2875 129.625 0 109.5 0 87.5C0 39.175 44.775 0 100 0C155.225 0 200 39.175 200 87.5C200 135.825 155.225 175 100 175C90.0956 175.013 80.2323 173.727 70.6625 171.175C64.1625 174.463 50.175 180.45 27.3125 184.988Z" fill="white"/>
+        </svg>
+        <h1>ISL</h1>
+      </div>
+      <div id="errorDisplay" class="error-message" style="color: rgba(60, 255, 0, 0.678);"></div>
+      <form id="loginForm" method="post" action="/user/login">
+        <p class="info">Enter Your Registered Email</p>
+        <div class="input-div">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" autofocus required/>
+        </div>
+
+        <div class="input-div btn-div">
+          <button type="submit" id="postButton" class="btn">Send</button>
+        </div>
+      </form>
+
+      <a href="/">
+        <svg class = "home" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 20V11H3L12 5L21 11H17.5V20H14.5V16.5C14.5 15.6716 13.8284 15 13 15H11C10.1716 15 9.5 15.6716 9.5 16.5V20H6.5Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      </a>
+  </div>
+</body>
+<script>
+  const loginForm = document.getElementById('loginForm');
+  const errorDisplay = document.getElementById('errorDisplay');
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+
+    try {
+      const response = await fetch('/user/forgotPassword', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({email}),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        errorDisplay.innerText = data.msg; // Display the error message
+      } else {
+        // Handle successful 
+        errorDisplay.innerText = data.status + ": " + data.msg;
+      }
+    } catch (error) {
+      console.error('Error logging in:', error);
+    }
+  });
+</script>
+</html>

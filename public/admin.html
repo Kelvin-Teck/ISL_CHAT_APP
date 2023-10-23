@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Access</title>
+</head>
+<body>
+    <h1>Update Access</h1>
+    <button onclick="updateAccess()">Grant Access</button>
+
+    <script>
+        // Your JSON data
+        var userData = {
+            "_id": {
+                "$oid": "653120caa11348e28edbf9d7"
+            },
+            "name": "adeks",
+            "email": "adeks@gmail.com",
+            "username": "adeks",
+            "password": "$2a$10$gWqIniSKVSA3BlnoVvIDse8t8sPow1U31tq0vuKTDmA4i3N1gCtLK",
+            "role": "user",
+            "selectedClass": "jss3",
+            "accessGranted": true,
+            "createdAt": {
+                "$date": "2023-10-19T12:27:54.817Z"
+            },
+            "updatedAt": {
+                "$date": "2023-10-19T12:27:54.817Z"
+            },
+            "__v": 0
+        };
+
+        // Function to update access
+        function updateAccess() {
+            userData.accessGranted = true; // Change access to true
+            alert("Access has been granted.");
+        }
+    </script>
+</body>
+</html>

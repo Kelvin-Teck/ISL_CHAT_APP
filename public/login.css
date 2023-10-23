@@ -1,0 +1,112 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: #082004;
+  color: white;
+}
+
+.container{
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.chat-icon{
+  width: 100%;
+  height: 100%;
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Twinkle Star', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 34px;
+}
+
+form{
+  width: 380px;
+  height: 30%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-div{
+  display: flex;
+  gap: 4px;
+  height: 38px;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #fff;
+  color: #000;
+  font-family: 'poppins', sans-serif;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn-div{
+  margin-top: 5%;
+}
+
+input, .btn{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-family: 'poppins', sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+a{
+  color: #fff;
+  font-family: 'poppins', sans-serif;
+}
+
+.home{
+  width: 40px;
+}
+
+.register{
+  display: inline;
+  text-decoration: none;
+  font-family: 'poppins', sans-serif;
+  font-size: 12px;
+}
+
+#errorDisplay{
+  color: #fff;
+  font-family: 'poppins', sans-serif;
+  font-size: 22px;
+}
+
+span{
+  display: block;
+  font-family: 'poppins';
+  font-size: 14px;
+  opacity: 0.5;
+  text-align: center;
+  margin: 0 auto;
+}

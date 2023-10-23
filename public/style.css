@@ -1,0 +1,75 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: #082004;
+  color: white;
+}
+
+.container{
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo{
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin-top: 30px;
+}
+
+.chat-icon{
+  width: 100%;
+  height: 100%;
+}
+
+.logo h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Twinkle Star';
+    font-size: 34px;
+}
+
+p{
+  font-family: 'poppins';
+  font-size: 32px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-container{
+  height: 40px;
+  width: 380px;
+  padding: 0 12px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 90px;
+}
+
+.btn{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: none;
+  font-size: 20px;
+  font-family: 'poppins';
+  cursor: pointer;
+}
+
+span{
+  font-family: 'poppins';
+  margin-top: 2%;
+  opacity: 0.5;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+}

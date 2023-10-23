@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISL-CHATROOM</title>
+  <link rel="stylesheet" href="chat.css"/>
+  <link rel="stylesheet" href="chat-section.css"/>
+  <link rel="icon" type="image" href="icon.png?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Twinkle+Star&display=swap" rel="stylesheet">
+
+</head>
+<body id="cc">
+  <div class="float">
+    <div class="float-content reset">
+      <ion-icon class="icon-close" name="close-outline"></ion-icon>
+      <p>RESET PASSWORD</p>
+      <input id="change-password" type="password" autofocus/>
+      <button class="reset-pass">RESET</button>
+    </div>
+
+    <div class="float-content remove-users">
+      <ion-icon class="icon-close" name="close-outline"></ion-icon>
+      <h4>Remove Users</h4>
+      <h3>Group-Name</h3>
+      <p>Select Users:</p>
+      <div class="user-list-r">
+        <div class="user-name">
+          <input type="checkbox" id="a">
+          <label for="a">First</label>
+        </div>
+        <div class="user-name">
+          <input type="checkbox" id="b">
+          <label for="b">First</label>
+        </div>
+      </div>
+      <button class="remove-button">REMOVE</button>
+    </div>
+
+    <div class="float-content cgroup">
+      <ion-icon class="icon-close" name="close-outline"></ion-icon>
+      <h4 class="create-group">Create Group</h4>
+      <input type="text" placeholder="Group Name" autofocus/>
+      <p>Select Users:</p>
+      <div class="user-list-g">
+        <div class="user-name">
+          <input type="checkbox" id="a">
+          <label for="a">First</label>
+        </div>
+        <div class="user-name">
+          <input type="checkbox" id="b">
+          <label for="b">First</label>
+        </div>
+      </div>
+      <button class="create-button">CREATE</button>
+    </div>
+  </div>
+  <article>
+    <div class="chat-list">
+      <div class="chat-top">
+        <div class="top-section">
+          <h1 class="greeting">Welcome <span>&nbsp;</span></h1>
+          <a href="/">
+            <svg class = "home" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 20V11H3L12 5L21 11H17.5V20H14.5V16.5C14.5 15.6716 13.8284 15 13 15H11C10.1716 15 9.5 15.6716 9.5 16.5V20H6.5Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+          </a>
+        </div>
+        <div class="admin">
+          <ion-icon class="icon-add" name="add-circle-outline"></ion-icon>
+          <span>CREATE GROUP</span>
+        </div>
+        <div class="search">
+          <input type="search" placeholder="Search or start a new chat" id="searchInput" spellcheck="false"/>
+          <div id="results">
+            <!-- <p>My name is Daniel</p>
+            <p>My name is Sam</p>
+            <p>My name is Dave</p> -->
+          </div>
+        </div>
+        <div class="section">
+          <span class="border-bottom">MESSAGES</span>
+          <span>GROUPS</span>
+        </div>
+      </div>
+      <div id="chats">
+        <div class="chat">
+          <img src="profile.png" alt="" width="60px" height="60px">
+          <h2>Johnson0</h2>
+          <span>What is your...</span>
+        </div>
+        <!-- <div class="chat">
+          <img src="profile.png" alt="" width="60px" height="60px">
+          <h2>Johnson1</h2>
+        </div>
+        <div class="chat">
+          <img src="profile.png" alt="" width="60px" height="60px">
+          <h2>Johnson2</h2>
+        </div>
+        <div class="chat">
+          <img src="profile.png" alt="" width="60px" height="60px">
+          <h2>Johnson3</h2>
+        </div>
+        <div class="chat">
+          <img src="profile.png" alt="" width="60px" height="60px">
+          <h2>Johnson</h2>
+        </div>
+        <div class="chat">
+          <img src="profile.png" alt="" width="60px" height="60px">
+          <h2>Johnson</h2>
+        </div>
+        <div class="chat">
+          <img src="profile.png" alt="" width="60px" height="60px">
+          <h2>Johnson</h2>
+        </div>
+        <div class="chat">
+          <img src="profile.png" alt="" width="60px" height="60px">
+          <h2>Johnson</h2>
+        </div> -->
+      </div>
+      <div class="links">
+        <a class="logout" href="#">Logout</a>
+      </div>
+    </div>
+    <div class="chat-section">
+      <div class="chat-message">
+        <div class="display-message">
+
+          <header>
+            <div class="details">
+              <img src="profile.png" alt="" width="60px" height="60px">
+              <h2>Johnson</h2>
+            </div>
+            <div class="remove">
+              <ion-icon class="icon-remove" name="remove-circle-outline"></ion-icon>
+              <span>Remove User</span>
+            </div>
+          </header>
+
+          <section>
+            <!-- <div class="owner"><span>You:</span><p>How far na? Lorem ipsum dolor sit amet, conse adipisicing </p></div>
+            <div class="other"><span>Johnson0:</span><p>How Lorem ipsum dolor, sit amet consectetur adipisicing elit.? </p></div>
+            <div class="owner"><span>You:</span><p>How far na? Lorem ipsum dolor sit amet, contur adipisicing </p></div>
+            <div class="other"><span>johnson0:</span><p>How Lorem ipsum dolor sit, amet consectetur adipisicing elit.? </p></div> -->
+          </section>
+          
+          <footer>
+            <input type="text" placeholder="Type a message" autofocus>
+            <button>
+              <ion-icon class="send" name="send-outline"></ion-icon>
+            </button>
+          </footer>
+
+        </div>
+        <div class="no-message">
+          <div class="logo">
+            <svg class="chat-icon" viewBox="0 0 200 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33.475 136.175C34.7725 137.477 35.7667 139.05 36.3868 140.781C37.0069 142.511 37.2376 144.357 37.0625 146.188C36.184 154.657 34.5185 163.027 32.0875 171.188C49.525 167.15 60.175 162.475 65.0125 160.025C67.7563 158.635 70.9161 158.306 73.8875 159.1C82.4054 161.371 91.1846 162.514 100 162.5C149.95 162.5 187.5 127.412 187.5 87.5C187.5 47.6 149.95 12.5 100 12.5C50.05 12.5 12.5 47.6 12.5 87.5C12.5 105.85 20.2125 122.875 33.475 136.175ZM27.3125 184.988C24.3509 185.575 21.3796 186.112 18.4 186.6C15.9 187 14 184.4 14.9875 182.075C16.0974 179.457 17.1147 176.802 18.0375 174.113L18.075 173.988C21.175 164.988 23.7 154.638 24.625 145C9.2875 129.625 0 109.5 0 87.5C0 39.175 44.775 0 100 0C155.225 0 200 39.175 200 87.5C200 135.825 155.225 175 100 175C90.0956 175.013 80.2323 173.727 70.6625 171.175C64.1625 174.463 50.175 180.45 27.3125 184.988Z" fill="white"/>
+              </svg>
+              <h1>ISL</h1>
+          </div>
+          <h1 id="chat-message">ISL CHATROOM</h1>
+          <p>Send and receive messages here.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <!-- <script defer src="/socket.io/socket.io.js"></script> -->
+  <script defer src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+</body>
+</html>

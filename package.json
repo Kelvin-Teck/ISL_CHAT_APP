@@ -1,0 +1,28 @@
+{
+  "name": "isl-project",
+  "version": "1.0.0",
+  "description": "A Chat application built for International school Lagos(ISL)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adekunle Habeeb",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.0.0",
+    "mongoose": "^6.10.0",
+    "nodemailer": "^6.9.5",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.2"
+  }
+}
